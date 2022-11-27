@@ -1,0 +1,22 @@
+
+:root{
+    --dark: #000000ff;
+    --color-0: #2d0048ff;
+    --color-1: #590090ff;
+    --color-2: #6f438bff;
+    --light: #858585ff;
+}
+html{
+    font-size: 62.5%;
+    color: var(--light);
+}
+body{
+    margin: 0;
+}
+/*  */
+header{
+    background-color: var(--color-0);
+}
+#projects-section{
+    background-color: var(--color-0);
+}
