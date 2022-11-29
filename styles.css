@@ -1,6 +1,4 @@
-*{
-    /* border: red 1px solid; */
-}
+
 :root{
     --dark: #000000ff;
     --color-0: rgb(8, 8, 8);
@@ -163,6 +161,7 @@ main{
     border: 10px rgba(0, 0, 0, 0.05);
     border-style: groove;
     filter: brightness(80%);
+    object-fit: cover;
 }
 .project-img p{
     opacity: 0;
