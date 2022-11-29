@@ -60,7 +60,7 @@ function getQuote(){
     quoteText.textContent = quotesArray[index].quote;
     quoteAuthor.textContent = quotesArray[index].author;
 }
-// ini
+// initialize
 window.addEventListener('resize', adjustByQuery);
 nextBtn.addEventListener('click', goNext);
 prevBtn.addEventListener('click', goBack);
