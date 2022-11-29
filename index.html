@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <script src="https://kit.fontawesome.com/1d631eaa19.js" crossorigin="anonymous"></script>
+    <title>nmz1z</title>
 </head>
 <body>
     <header>
@@ -26,22 +27,79 @@
                 <div id="about-img-wrapper">
                     <img src="https://avatars.githubusercontent.com/u/118689160?v=4" alt="" id="about-img" />
                 </div>
-                <div id="about-text">Hi, I'm nmz1z, an aspiring web developer. I started my coding journey in November, 2022 and since then I've been learning HTML/CSS and Javascript.</div>
-
+                <div id="about-text"><p>Hi, I'm nmz1z, an aspiring web developer. I started my coding journey in November, 2022 and since then I've been learning HTML/CSS and Javascript</p></div>
             </div>
         </section>
         <section id="projects-section">
             <h1 id="projects-header">Projects</h1>
-            <div class="container" id="projects-grid">
-                <div class="project-box"></div>
-                <div class="project-box"></div>
-                <div class="project-box"></div>
+            <div id="projects-grid">
+                <div class="button" id="previous">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </div>
+                <div id="slider">
+                    <div class="project-box" id="">
+                        <div class="project-img">
+                            <img class="project-img" src="img/ramen-page.png">
+                            <div class="project-mask"></div>
+                            <p class="project-text">
+                                My very first project. Simple page, CSS + HTML.
+                            </p>
+                        </div>
+                        <div class="project-name">
+                            <p>Ramen Page</p>
+                        </div>
+                    </div>
+                    <div class="project-box">
+                        <div class="project-img">
+                            <img class="project-img" src="img/ramen-page.png">
+                            <div class="project-mask"></div>
+                            <p class="project-text">
+                                My very first project. Simple page, CSS + HTML.
+                            </p>
+                        </div>
+                        <div class="project-name">
+                            <p>Ramen Page</p>
+                        </div>
+                    </div>
+                    <div class="project-box">
+                        <div class="project-img">
+                            <img class="project-img" src="img/ramen-page.png">
+                            <div class="project-mask"></div>
+                            <p class="project-text">
+                                My very first project. Simple page, CSS + HTML.
+                            </p>
+                        </div>
+                        <div class="project-name">
+                            <p>Ramen Page</p>
+                        </div>
+                    </div>
+                    <div class="project-box">
+                        <div class="project-img">
+                            <img class="project-img" src="img/ramen-page.png">
+                            <div class="project-mask"></div>
+                            <p class="project-text">
+                                My very first project. Simple page, CSS + HTML.
+                            </p>
+                        </div>
+                        <div class="project-name">
+                            <p>Ramen Page</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="button" id="next">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
             </div>
         </section>
         <section id="quote-section">
             <div class="container" id="quote-container">
-                <p id="quote"></p>
-                <p id="author"></p>
+                <div id="quote">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <p id="quote-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, minima. Deleniti dicta nihil consequatur quidem, nesciunt expedita accusantium neque placeat.</p>
+                    <div class="quote-icon"><i class="fa-solid fa-quote-right"></i></div>
+                </div>
+                <p id="author">Lorem</p>
+                <button id="quote-button">New quote</button>
             </div>
         </section>
     </main>
@@ -51,5 +109,5 @@
         <div id="info"></div>
     </footer>
 </body>
-<script scr="script.js"></script>
+<script src="script.js"></script>
 </html>

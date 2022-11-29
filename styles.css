@@ -3,8 +3,8 @@
 }
 :root{
     --dark: #000000ff;
-    --color-0: rgb(22, 0, 35);
-    --color-0-op: rgba(12, 0, 17, 0.922);
+    --color-0: rgb(8, 8, 8);
+    --color-0-op: rgba(0, 0, 0, 0.925);
     --color-1: #590090ff;
     --color-2: #6f438bff;
     --light: rgb(118, 114, 114);
@@ -12,6 +12,7 @@
 html{
     font-size: 62.5%;
     color: var(--light);
+    box-sizing: border-box;
 }
 body{
     display: flex;
@@ -21,7 +22,22 @@ body{
 header{
     background-color: var(--color-0);
     margin: 0;
+    display: flex;
+    font-size: 2rem;
 }
+nav{
+    margin-left: auto;
+    list-style: none;
+}
+#nav-list{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
+}
+
+/*  */
 .container{
     max-width: 800px;
     width: 80%;
@@ -41,33 +57,35 @@ main{
     font-size: 2rem;
     display: flex;
     position: relative;
+    background-position: cover;
+    background: url(img/bg-01.jpg) center fixed;
 }
 #about-bg{
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: 
-        url(img/bg-01.jpg);
     filter: grayscale(100%);
     background-position: center;
-    background-size: cover;
     z-index: -1;
 }
 #about-me{
-    padding-bottom: 5rem;
-    margin: 7.5rem auto;
+    padding-bottom: 1rem;
+    margin: 10rem auto;
     background-color: var(--color-0-op);
     flex-wrap: wrap;
 }
 #about-header{
     width: 100%;
+    text-align: center;
 }
 #about-text{
-    align-content: center;
+    width: 60%;
+    display: flex;
+    align-items: center;
     padding: 0 2rem;
     margin: 1rem auto;
-    font-size: 1.5rem;
-    width: 60%;
+    font-size: 2rem;
+    flex-grow: 1;
 }
 #about-img-wrapper{
     min-width: 150px;
@@ -87,21 +105,137 @@ main{
     filter: brightness(60%);
 }
 
-/*  */
+/* projects */
 #projects-section{
     padding: 2rem 0;
     background-color: var(--color-0);
+    font-size: 2rem;
+}
+#projects-header{
+    text-align: center;
 }
 #projects-grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
+    display: flex;
+    overflow: hidden;
+    width: 900px;
+    margin: auto;
+}
+#slider{
+    width: 800px;
+    display: flex;
+    overflow: hidden;
+    margin: auto;
+    scroll-behavior: smooth;
 }
 .project-box{
+    width: 400px;
+    flex-shrink: 0;
     aspect-ratio: 1;
-    border: 1px solid;
 }
-#teste{
-    height: 5rem;
-    background-color:cyan;
+.button{
+    flex-grow: 1;
+    min-width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button:hover{
+    color: yellow;
+}
+.button i{
+    font-size: 3rem;
+}
+/* Projects cards */
+.project-box{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+}
+.project-img{
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    aspect-ratio: 4/3;
+}
+.project-img img{
+    box-shadow: 0px 0px 10px 0 #b9b9b9;
+    border: 10px rgba(0, 0, 0, 0.05);
+    border-style: groove;
+    filter: brightness(80%);
+}
+.project-img p{
+    opacity: 0;
+}
+.project-mask{
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 98.5%;
+    background: linear-gradient(rgba(0, 0, 0, 0.501), rgba(0, 0, 0, 0.871));
+
+    opacity: 0;
+    transition: 0.5s;
+}
+.project-img:hover > p, .project-img:hover > .project-mask{
+    opacity: 1;
+    transition: 0.5s;
+}
+.project-text{
+    width: 80%;
+    color: rgba(255, 255, 255, 0.838);
+    bottom: 5%;
+    position: absolute;
+    margin-left: 3rem;
+}
+/*  */
+#quote-section{
+    background: url(img/bg-01.jpg) center fixed;
+    font-size: 2rem;
+}
+#quote-container{
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    margin: 10rem auto;
+    background-color: var(--color-0-op);
+    min-height: 300px;
+}
+#quote{
+    display: flex;
+    margin: 5rem auto 1rem;
+    width: 90%;
+    height: 100%;
+}
+#quote-text{
+    font-size: 2.2rem;
+    margin: 0 2rem;
+}
+.quote-icon{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    font-size: 5rem;
+    width: auto;
+}
+#author{
+    width: 80%;
+    margin: auto;
+    text-align: end;
+    font-size: 3.5rem;
+}
+#quote-button{
+    width: 30%;
+    height: 3rem;
+    font-size: 2rem;
+    margin: auto;
+}
+
+@media (max-width: 900px){
+    #projects-grid{
+        width: 500px;
+    }
 }
