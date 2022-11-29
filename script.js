@@ -1,4 +1,5 @@
 //// VAR
+// slider
 let sliderContainer = document.getElementById("slider");
 let nextBtn = document.getElementById("next");
 let prevBtn = document.getElementById("previous");
@@ -9,6 +10,11 @@ let containerWid = containerDim.width;
 let animation = false;
 
 var queryWidth = window.matchMedia("(max-width: 900px)");
+
+// quotes
+let quoteText = document.getElementById("quote-text");
+let quoteAuthor = document.getElementById("author");
+let quoteButton = document.getElementById("quote-button");
 
 // functions: buttons
 function goNext(){
@@ -48,8 +54,14 @@ function adjustByQuery(){
         } 
 }
 // functions: quotes
-
+function getQuote(){
+    console.log("oi")
+    let index = Math.floor(Math.random() * quotesArray.length);
+    quoteText.textContent = quotesArray[index].quote;
+    quoteAuthor.textContent = quotesArray[index].author;
+}
 // ini
 window.addEventListener('resize', adjustByQuery);
 nextBtn.addEventListener('click', goNext);
 prevBtn.addEventListener('click', goBack);
+quoteButton.addEventListener("click", getQuote);

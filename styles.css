@@ -211,15 +211,20 @@ main{
     height: 100%;
 }
 #quote-text{
-    font-size: 2.2rem;
+    text-align: center;
+    font-size: 2.5rem;
     margin: 0 2rem;
 }
 .quote-icon{
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    text-align: start;
     font-size: 5rem;
     width: auto;
+}
+.quote-icon:first-of-type{
+    text-align: end;
 }
 #author{
     width: 80%;
