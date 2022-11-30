@@ -4,8 +4,8 @@ let sliderContainer = document.getElementById("slider");
 let nextBtn = document.getElementById("next");
 let prevBtn = document.getElementById("previous");
 
-let containerDim = sliderContainer.getBoundingClientRect();
-let containerWid = containerDim.width;
+let containerDimension = sliderContainer.getBoundingClientRect();
+let containerWidth = containerDimension.width;
 
 let animation = false;
 
@@ -20,13 +20,13 @@ let quoteButton = document.getElementById("quote-button");
 function goNext(){
     if(!animation){
         animation = true;
-        containerDim = sliderContainer.getBoundingClientRect();
-        containerWid = containerDim.width;
+        containerDimension = sliderContainer.getBoundingClientRect();
+        containerWidth = containerDimension.width;
         console.log("next");
         if(queryWidth.matches){
-            sliderContainer.scrollLeft += containerWid;
+            sliderContainer.scrollLeft += containerWidth;
         }else {
-            sliderContainer.scrollLeft += containerWid/2;
+            sliderContainer.scrollLeft += containerWidth/2;
         }
         setTimeout(() => {animation = false;}, 500)
     }
@@ -34,13 +34,13 @@ function goNext(){
 function goBack(){
     if(!animation){
         animation = true;
-        containerDim = sliderContainer.getBoundingClientRect();
-        containerWid = containerDim.width;
+        containerDimension = sliderContainer.getBoundingClientRect();
+        containerWidth = containerDimension.width;
         console.log("back");
         if(queryWidth.matches){
-            sliderContainer.scrollLeft -= containerWid;
+            sliderContainer.scrollLeft -= containerWidth;
         }else {
-            sliderContainer.scrollLeft -= containerWid/2;
+            sliderContainer.scrollLeft -= containerWidth/2;
         }
         setTimeout(() => {animation = false;}, 500)
     }
@@ -49,7 +49,7 @@ function adjustByQuery(){
         console.log(queryWidth);
         if (queryWidth.matches){
             sliderContainer.style.scrollBehavior = "auto";
-            sliderContainer.scrollLeft -= 7*containerWid;
+            sliderContainer.scrollLeft -= 7*containerWidth;
             sliderContainer.style.scrollBehavior = "smooth";
         } 
 }
