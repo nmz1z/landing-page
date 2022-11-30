@@ -14,8 +14,8 @@ var projectsArray = [
     {
         link: "",
         img: "",
-        title: "Coming soon",
-        text: "Coming soon"
+        title: "Kana Drills",
+        text: "Practice Katakana and Hiragana in a fun way!"
     },
     {
         link: "",
