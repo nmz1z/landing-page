@@ -70,7 +70,6 @@ function getProjects(array){
         //add a
         let link = document.createElement("a");
         box.append(link);
-        // link.style.width = "100%";
         link.href = array[i].link;
             //add div
             let imgContainer = document.createElement("div"); 
@@ -91,13 +90,13 @@ function getProjects(array){
                 imgContainer.append(text);
                 text.textContent = array[i].text;
         //add div
-            let title = document.createElement("div");
-            title.classList.add("project-name");
-            box.append(title);
-            //add p
-            let titleText = document.createElement("p");
-            title.append(titleText);
-            titleText.textContent = array[i].title;
+        let title = document.createElement("div");
+        title.classList.add("project-name");
+        box.append(title);
+        //add p
+        let titleText = document.createElement("p");
+        title.append(titleText);
+        titleText.textContent = array[i].title;
     }
 }
 
