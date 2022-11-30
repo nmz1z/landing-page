@@ -63,37 +63,37 @@ function getQuote(){
 // inject projects in the slider container
 function getProjects(array){
     for(let i = 0; i < array.length; i++){
-    //add div
+    //add div container
     let box = document.createElement("div");
     box.classList.add("project-box");
     sliderContainer.append(box);
-        //add a
+        //add anchor (wrap image container)
         let link = document.createElement("a");
         box.append(link);
         link.href = array[i].link;
-            //add div
+            //add div (img container)
             let imgContainer = document.createElement("div"); 
             link.append(imgContainer);
             imgContainer.classList.add("project-img");
-                //add img
+                //add img (project cover)
                 let image = document.createElement("img");
                 image.src = array[i].img;
                 imgContainer.append(image);
                 image.classList.add("project-img");
-                //add mask
+                //add mask (hover mask)
                 let mask = document.createElement("div");
                 imgContainer.append(mask);
                 mask.classList.add("project-mask");
-                //add p
+                //add p (hover text)
                 let text = document.createElement("p");
                 text.classList.add("project-text");
                 imgContainer.append(text);
                 text.textContent = array[i].text;
-        //add div
+        //add div (title container)
         let title = document.createElement("div");
         title.classList.add("project-name");
         box.append(title);
-        //add p
+        //add p (title)
         let titleText = document.createElement("p");
         title.append(titleText);
         titleText.textContent = array[i].title;
