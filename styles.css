@@ -238,6 +238,7 @@ main{
 }
 #quote-button{
     width: 30%;
+    min-width: 180px;
     height: 3rem;
     font-size: 2rem;
     margin: 2rem auto;
