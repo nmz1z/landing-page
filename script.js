@@ -9,6 +9,7 @@ let containerWidth = containerDimension.width;
 
 let animation = false;
 
+let containerIndex = 0;
 var queryWidth = window.matchMedia("(max-width: 900px)");
 
 // quotes
@@ -18,11 +19,13 @@ let quoteButton = document.getElementById("quote-button");
 
 // functions: buttons
 function goNext(){
+    if(containerIndex < projectsArray.length - 1){
+        containerIndex++
+    }else{}
     if(!animation){
         animation = true;
         containerDimension = sliderContainer.getBoundingClientRect();
         containerWidth = containerDimension.width;
-        console.log("next");
         if(queryWidth.matches){
             sliderContainer.scrollLeft += containerWidth;
         }else {
@@ -32,11 +35,13 @@ function goNext(){
     }
 }
 function goBack(){
+    if(containerIndex > 0){
+        containerIndex--
+    }else{}
     if(!animation){
         animation = true;
         containerDimension = sliderContainer.getBoundingClientRect();
         containerWidth = containerDimension.width;
-        console.log("back");
         if(queryWidth.matches){
             sliderContainer.scrollLeft -= containerWidth;
         }else {
@@ -45,17 +50,19 @@ function goBack(){
         setTimeout(() => {animation = false;}, 500)
     }
 }
+// adjust container view on window resize
 function adjustByQuery(){
-        console.log(queryWidth);
         if (queryWidth.matches){
             sliderContainer.style.scrollBehavior = "auto";
-            sliderContainer.scrollLeft -= 7*containerWidth;
+            let sliderOffset = sliderContainer.offsetLeft;
+            let positionBox = projectObjects[containerIndex].offsetLeft;
+            sliderContainer.scrollTo(0, 0);
+            sliderContainer.scrollLeft = positionBox - sliderOffset;
             sliderContainer.style.scrollBehavior = "smooth";
         } 
 }
 // functions: quotes
 function getQuote(){
-    console.log("oi")
     let index = Math.floor(Math.random() * quotesArray.length);
     quoteText.textContent = quotesArray[index].quote;
     quoteAuthor.textContent = quotesArray[index].author;
@@ -106,3 +113,6 @@ window.addEventListener('resize', adjustByQuery);
 nextBtn.addEventListener('click', goNext);
 prevBtn.addEventListener('click', goBack);
 quoteButton.addEventListener("click", getQuote);
+
+//
+let projectObjects = document.getElementsByClassName("project-box");
