@@ -1,5 +1,5 @@
 ## Live Preview:
-https://nmz1z.github.io/odin-landing-page/
+https://nmz1z.github.io/landing-page/
 
 ## LOG
 ### Update: December 1st, 2022
