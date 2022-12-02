@@ -50,6 +50,7 @@ function goBack(){
         setTimeout(() => {animation = false;}, 500)
     }
 }
+
 // adjust container view on window resize
 function adjustByQuery(){
         if (queryWidth.matches){
@@ -61,13 +62,14 @@ function adjustByQuery(){
             sliderContainer.style.scrollBehavior = "smooth";
         } 
 }
-// functions: quotes
+
+// get a new random quote and update text
 function getQuote(){
     let index = Math.floor(Math.random() * quotesArray.length);
     quoteText.textContent = quotesArray[index].quote;
     quoteAuthor.textContent = quotesArray[index].author;
 }
-// inject projects in the slider container
+// create projects elements and inject in html
 function getProjects(array){
     for(let i = 0; i < array.length; i++){
     //add div container
@@ -107,12 +109,12 @@ function getProjects(array){
     }
 }
 
-// initialize
+// inject projects
 getProjects(projectsArray);
+// add events
 window.addEventListener('resize', adjustByQuery);
 nextBtn.addEventListener('click', goNext);
 prevBtn.addEventListener('click', goBack);
 quoteButton.addEventListener("click", getQuote);
-
-//
+// get project Objects after injection
 let projectObjects = document.getElementsByClassName("project-box");

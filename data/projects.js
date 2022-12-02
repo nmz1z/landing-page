@@ -12,8 +12,8 @@ var projectsArray = [
         text: "Play Rock-Paper-Scissors against the computer!"
     },
     {
-        link: "",
-        img: "",
+        link: "https://nmz1z.github.io/kana-drills/",
+        img: "img/kana.png",
         title: "Kana Drills",
         text: "Practice Katakana and Hiragana in a fun way!"
     },
