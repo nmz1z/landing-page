@@ -1,14 +1,19 @@
 // VARIABLES
+// navbar
+let navAbout = document.getElementById("nav-about");
+let navProjects = document.getElementById("nav-projects");
+let navQuotes = document.getElementById("nav-quotes");
+let navList = document.getElementById("nav-list");
+
+let hamburgerButton = document.getElementById("hamburger");
+
 // slider
 let sliderContainer = document.getElementById("slider");
 let nextBtn = document.getElementById("next");
 let prevBtn = document.getElementById("previous");
-
 let containerDimension = sliderContainer.getBoundingClientRect();
 let containerWidth = containerDimension.width;
-
 let animation = false;
-
 let containerIndex = 0;
 var queryWidth = window.matchMedia("(max-width: 900px)");
 
@@ -16,6 +21,12 @@ var queryWidth = window.matchMedia("(max-width: 900px)");
 let quoteText = document.getElementById("quote-text");
 let quoteAuthor = document.getElementById("author");
 let quoteButton = document.getElementById("quote-button");
+
+// functions: navbar
+function handleHamburgerClick(){
+    console.log("click");
+    navList.classList.toggle("nav-list--display");
+}
 
 // functions: buttons
 function goNext(){
@@ -112,9 +123,14 @@ function getProjects(array){
 // inject projects
 getProjects(projectsArray);
 // add events
-window.addEventListener('resize', adjustByQuery);
-nextBtn.addEventListener('click', goNext);
-prevBtn.addEventListener('click', goBack);
+hamburgerButton.addEventListener("click", handleHamburgerClick);
+window.addEventListener("resize", adjustByQuery);
+nextBtn.addEventListener("click", goNext);
+prevBtn.addEventListener("click", goBack);
 quoteButton.addEventListener("click", getQuote);
+navAbout.addEventListener("click", () =>{document.getElementById("about-section").scrollIntoView({ behavior: 'smooth', block: 'center'});})
+navProjects.addEventListener("click", () =>{document.getElementById("projects-section").scrollIntoView({ behavior: 'smooth', block: 'center'});})
+navQuotes.addEventListener("click", () =>{document.getElementById("quote-section").scrollIntoView({ behavior: 'smooth', block: 'center'});})
 // get project Objects after injection
+getQuote()
 let projectObjects = document.getElementsByClassName("project-box");
