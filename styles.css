@@ -238,7 +238,7 @@ main{
     display: flex;
     margin: 5rem auto 1rem;
     width: 90%;
-    min-height: 15rem;
+    min-height: 10rem;
 }
 #quote-title{
     margin-bottom: 0;
@@ -348,6 +348,9 @@ footer i:hover{
     }
     .container{
         font-size: 2rem;
+    }
+    #quote{
+        min-height: 15rem;
     }
     #author{
         font-size: 2.5rem;
