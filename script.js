@@ -24,7 +24,6 @@ let quoteButton = document.getElementById("quote-button");
 
 // functions: navbar
 function handleHamburgerClick(){
-    console.log("click");
     navList.classList.toggle("nav-list--display");
 }
 
@@ -122,15 +121,18 @@ function getProjects(array){
 
 // inject projects
 getProjects(projectsArray);
-// add events
-hamburgerButton.addEventListener("click", handleHamburgerClick);
+// buttons events
 window.addEventListener("resize", adjustByQuery);
 nextBtn.addEventListener("click", goNext);
 prevBtn.addEventListener("click", goBack);
 quoteButton.addEventListener("click", getQuote);
-navAbout.addEventListener("click", () =>{document.getElementById("about-section").scrollIntoView({ behavior: 'smooth', block: 'center'});})
-navProjects.addEventListener("click", () =>{document.getElementById("projects-section").scrollIntoView({ behavior: 'smooth', block: 'center'});})
-navQuotes.addEventListener("click", () =>{document.getElementById("quote-section").scrollIntoView({ behavior: 'smooth', block: 'center'});})
+// navbar events
+hamburgerButton.addEventListener("click", handleHamburgerClick);
+navAbout.addEventListener("click", () =>{document.getElementById("about-section").scrollIntoView({ behavior: "smooth", block: "center"});})
+navProjects.addEventListener("click", () =>{document.getElementById("projects-section").scrollIntoView({ behavior: "smooth", block: "center"});})
+navQuotes.addEventListener("click", () =>{document.getElementById("quote-section").scrollIntoView({ behavior: "smooth", block: "center"});})
 // get project Objects after injection
 getQuote()
 let projectObjects = document.getElementsByClassName("project-box");
+// scroll to About-me (center)
+document.getElementById("about-section").scrollIntoView({ block: "center"});
