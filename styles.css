@@ -11,6 +11,7 @@ html{
     font-size: 62.5%;
     color: var(--light);
     box-sizing: border-box;
+    font-family: 'Saira Semi Condensed', sans-serif;
 }
 body{
     display: flex;
@@ -155,7 +156,8 @@ main{
     color: yellow;
 }
 .button i{
-    font-size: 3rem;
+    font-size: 4rem;
+    transform: translateY(-100%);
 }
 /* Projects cards */
 .project-box{
@@ -257,8 +259,30 @@ main{
     height: 3rem;
     font-size: 2rem;
     margin: 2rem auto;
+    background-color: var(--light);
+}
+/* footer */
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10rem;
+    font-size: 2rem;
+    background-color: var(--dark);
+}
+footer a, footer i{
+    padding-left: 0.75rem;
+    margin-top: 0.5rem;
+    color: var(--light);
+}
+footer p{
+    font-size: 1.5rem;
+}
+footer i:hover{
+    color: mediumpurple;
 }
 
+/* media */
 @media (max-width: 900px){
     #projects-grid{
         width: 500px;
@@ -300,6 +324,9 @@ main{
         position: absolute;
         bottom: 0;
     }
+    .button i{
+        transform: translateY(-70%);
+    }
     .button:last-of-type{
         right: 0;
     }
@@ -308,6 +335,10 @@ main{
     }
     #author{
         font-size: 2.5rem;
+    }
+    /* footer */
+    footer{
+        padding: 0 4rem;;
     }
 }
     
