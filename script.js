@@ -70,7 +70,7 @@ function adjustByQuery(){
             sliderContainer.scrollTo(0, 0);
             sliderContainer.scrollLeft = positionBox - sliderOffset;
             sliderContainer.style.scrollBehavior = "smooth";
-        } 
+        }
 }
 
 // get a new random quote and update text
@@ -91,7 +91,7 @@ function getProjects(array){
         box.append(link);
         link.href = array[i].link;
             //add div (img container)
-            let imgContainer = document.createElement("div"); 
+            let imgContainer = document.createElement("div");
             link.append(imgContainer);
             imgContainer.classList.add("project-img");
                 //add img (project cover)
