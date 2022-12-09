@@ -8,7 +8,7 @@ var projectsArray = [
     {
         link: "https://nmz1z.github.io/rock-paper-scissors/",
         img: "img/rock-paper-scissors.png",
-        title: "Rock-Paper-Scissor",
+        title: "Rock-Paper-Scissors",
         text: "Play Rock-Paper-Scissors against the computer!"
     },
     {
@@ -18,9 +18,9 @@ var projectsArray = [
         text: "Practice Katakana and Hiragana in a fun way!"
     },
     {
-        link: "",
-        img: "",
-        title: "Coming soon",
-        text: "Coming soon"
+        link: "https://nmz1z.github.io/etch-a-sketch/",
+        img: "img/etch-a-sketch.png",
+        title: "Etch-a-Sketch",
+        text: "Draw some awesome pixel art!"
     }
 ]
