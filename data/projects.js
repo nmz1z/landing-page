@@ -1,5 +1,11 @@
 var projectsArray = [
     {
+        link: "https://nmz1z.github.io/calculator/",
+        img: "img/calculator.png",
+        title: "Calculator",
+        text: "Basic calculator in Javascript"
+    },
+    {
         link: "https://nmz1z.github.io/etch-a-sketch/",
         img: "img/etch-a-sketch.png",
         title: "Etch-a-Sketch",
