@@ -24,9 +24,9 @@ var projectsArray = [
         text: "Play Rock-Paper-Scissors against the computer!"
     },
     {
-        link: "https://nmz1z.github.io/ramen-page/",
+        link: "https://nmz1z.github.io/recipes/",
         img: "img/ramen-page.png",
-        title: "Ramen Page",
+        title: "Recipes",
         text: "My very first project! HTML and CSS only."
     }
 ]
